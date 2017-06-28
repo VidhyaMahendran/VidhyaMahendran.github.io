@@ -16,6 +16,26 @@
 		<meta property="og:description" content="Hosting a simple HTML page in Github is much easy"/>
 		<meta property="og:image" content="https://pbs.twimg.com/media/DDaWB-HXsAEm1I0.jpg"/>
 		<meta property="og:url" content="https://github.com/VidhyaMahendran/"/>
+		
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '444105492629934',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 	</head>
 	<body>
 		<div class="container">
@@ -30,7 +50,19 @@
 			var shareFbBtn = document.getElementById("shareInFacebook");
 			var shareTwitterBtn = document.getElementById("shareInTwitter");
 			shareFbBtn.addEventListener("click", function (evt) {
-				console.log("FB share button");
+				FB.ui(
+				    {
+					method: 'share_open_graph',
+					action_type: 'og.shares',
+					action_properties: JSON.stringify({
+					    object: {
+						'og:url': 'http://placehold.it/',
+						'og:title': 'Gaurav App',
+						'og:description': 'This is a test app',
+						'og:image': 'http://placehold.it/375x444'
+					    }
+					})
+				    });
 			}, false);
 			shareTwitterBtn.addEventListener("click", function (evt) {
 				console.log("Twitter share button");
