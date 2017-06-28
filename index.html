@@ -20,9 +20,21 @@
 	<body>
 		<div class="container">
 			<div class="main">
-				<h1>HTML5 Test file</h1>
-				<h2>HTML5 Test file</h2>
+				<h2>Share using Facebook</h2>
+				<p><button id="shareInFacebook">Share in Facebook</button></p>
+				<h2>Share using Twitter</h2>
+				<p><button id="shareInTwitter">Share in Twitter</button></p>
 			</div>
 		</div>
+		<script>
+			var shareFbBtn = document.getElementById("shareInFacebook");
+			var shareTwitterBtn = document.getElementById("shareInTwitter");
+			shareFbBtn.addEventListener("click", function (evt) {
+				console.log("FB share button");
+			}, false);
+			shareTwitterBtn.addEventListener("click", function (evt) {
+				console.log("Twitter share button");
+			}, false);
+		</script>
 	</body>
 </html>
