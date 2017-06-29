@@ -15,27 +15,27 @@
 		<meta property="og:title" content="My First Github Hosted page"/>
 		<meta property="og:description" content="Hosting a simple HTML page in Github is much easy"/>
 		<meta property="og:image" content="https://pbs.twimg.com/media/DDaWB-HXsAEm1I0.jpg"/>
-		<meta property="og:url" content="https://github.com/VidhyaMahendran/"/>
+		<meta property="og:url" content="https://developers.facebook.com/docs/"/>
 		
 		<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '444105492629934',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-  };
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId            : '444105492629934',
+                    autoLogAppEvents : true,
+                    xfbml            : true,
+                    version          : 'v2.9'
+                });
+                FB.AppEvents.logPageView();
+            };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
 	</head>
 	<body>
 		<div class="container">
@@ -52,16 +52,8 @@
 			shareFbBtn.addEventListener("click", function (evt) {
 				FB.ui(
 				    {
-					method: 'share_open_graph',
-					action_type: 'og.shares',
-					action_properties: JSON.stringify({
-					    object: {
-						'og:url': 'https://developers.facebook.com/docs/javascript/quickstart',
-						'og:title': 'FE App Title',
-						'og:description': 'This is a test app',
-						'og:image': 'https://fb-s-c-a.akamaihd.net/h-ak-fbx/v/t39.2081-6/c0.0.32.32/p32x32/851578_455087414601994_1601110696_n.png?oh=d0b03eab4c22e7ad74a418b51c1d8659&oe=59E09C82&__gda__=1507528438_4630939c61eea5115c89299e17f81953'
-					    }
-					})
+                        method: 'share',
+                        href: 'https://developers.facebook.com/docs/'
 				    });
 			}, false);
 			shareTwitterBtn.addEventListener("click", function (evt) {
