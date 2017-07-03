@@ -11,31 +11,28 @@
 		<meta name="twitter:image" content="https://pbs.twimg.com/media/DDaWB-HXsAEm1I0.jpg">
 
 		<!-- Facebook Open Graph Meta Information -->
-		<meta property="og:locale" content="en"/>
-		<meta property="og:title" content="My First Github Hosted page"/>
-		<meta property="og:description" content="Hosting a simple HTML page in Github is much easy"/>
-		<meta property="og:image" content="https://pbs.twimg.com/media/DDaWB-HXsAEm1I0.jpg"/>
-		<meta property="og:url" content="https://developers.facebook.com/docs/"/>
-		
-		<script>
-            window.fbAsyncInit = function() {
-                FB.init({
-                    appId            : '444105492629934',
-                    autoLogAppEvents : true,
-                    xfbml            : true,
-                    version          : 'v2.9'
-                });
-                FB.AppEvents.logPageView();
-            };
+		<meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+		<meta property="og:description"        content="How much does culture influence creative thinking?" />
+		<meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
 
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {return;}
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+		<script>
+			window.pAsyncInit = function() {
+				PDK.init({
+					appId: "<your app-id>", // Change this
+					cookie: true
+				});
+			};
+
+			(function(d, s, id){
+				var js, pjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//assets.pinterest.com/sdk/sdk.js";
+				pjs.parentNode.insertBefore(js, pjs);
+			}(document, 'script', 'pinterest-jssdk'));
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -44,20 +41,28 @@
 				<p><button id="shareInFacebook">Share in Facebook</button></p>
 				<h2>Share using Twitter</h2>
 				<p><button id="shareInTwitter">Share in Twitter</button></p>
+				<h2>Share using Pintrest</h2>
+				<a href="https://pinterest.com/pin/create/button/?url=https%3A//pinterest.com&media=https%3A//about.pinterest.com/sites/all/themes/custom/pinterest/images/pinterest-footer-logo.png&description=Simple%20Share%20Example" target="_blank">Pin on Pinterest</a>
 			</div>
 		</div>
 		<script>
 			var shareFbBtn = document.getElementById("shareInFacebook");
 			var shareTwitterBtn = document.getElementById("shareInTwitter");
+			var shareInPintrest = document.getElementById("shareInPintrest");
+			var appId = 444105492629934;
+			var redirectUrl = "https://scotch.io";
+			var url = "https://scotch.io";
+			var picture = "http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg";
+			var caption = "This%20is%20the%20caption";
+			var description = "This%20is%20the%20description";
 			shareFbBtn.addEventListener("click", function (evt) {
-				FB.ui(
-				    {
-                        method: 'share',
-                        href: 'https://developers.facebook.com/docs/'
-				    });
+				window.open('https://www.facebook.com/dialog/feed?app_id=' + appId + '&redirect_uri=' + redirectUrl + '&link=' + url + '&picture=' + picture + '&caption=' + caption + '&description=' + description);
 			}, false);
 			shareTwitterBtn.addEventListener("click", function (evt) {
 				console.log("Twitter share button");
+			}, false);
+			shareTwitterBtn.addEventListener("click", function (evt) {
+				console.log("Pintrest share button");
 			}, false);
 		</script>
 	</body>
