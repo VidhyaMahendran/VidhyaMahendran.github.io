@@ -74,17 +74,21 @@
 			var shareTwitterBtn = document.getElementById("shareInTwitter");
 			var shareInPintrest = document.getElementById("shareInPintrest");
 			var appId = 444105492629934;
-			var redirectUrl = "https://scotch.io";
-			var url = "https://scotch.io";
-			var picture = "http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg";
-			var caption = "This%20is%20the%20caption";
-			var description = "This%20is%20the%20description";
+			var url = "http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html";
+
+
 			shareFbBtn.addEventListener("click", function (evt) {
-				window.open('https://www.facebook.com/dialog/feed?app_id=' + appId + '&redirect_uri=' + redirectUrl + '&link=' + url + '&picture=' + picture + '&caption=' + caption + '&description=' + description);
+				FB.ui({
+					method: 'share',
+					mobile_iframe: true,
+					href: url,
+				}, function(response){});
 			}, false);
+
 			shareTwitterBtn.addEventListener("click", function (evt) {
 				console.log("Twitter share button");
 			}, false);
+
 			shareTwitterBtn.addEventListener("click", function (evt) {
 				console.log("Pintrest share button");
 			}, false);
