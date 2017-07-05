@@ -57,16 +57,28 @@
 			<div class="main">
 				<h2>Share using Facebook</h2>
 				<p><button id="shareInFacebook">Share in Facebook</button></p>
+				<div
+				class="fb-like"
+				data-share="true"
+				data-width="450"
+				data-show-faces="true">
+				</div>
+
 				<h2>Share using Twitter</h2>
-				<p><button id="shareInTwitter">Share in Twitter</button></p>
+				<p><a href="https://twitter.com/home?status=This%20photo%20is%20awesome!%20Check%20it%20out:%20pic.twitter.com/9Ee63f7aVp" id="shareInTwitter">Share in Twitter</a></p>
+
 				<h2>Share using Pintrest</h2>
 				<a href="https://pinterest.com/pin/create/button/?url=https%3A//pinterest.com&media=https%3A//about.pinterest.com/sites/all/themes/custom/pinterest/images/pinterest-footer-logo.png&description=Simple%20Share%20Example" target="_blank">Pin on Pinterest</a>
+
+				<h2>Share using Google+</h2>
+				<p><button id="shareInGooglePlus">Share in Google+</button></p>
 			</div>
 		</div>
 		<script>
 			var shareFbBtn = document.getElementById("shareInFacebook");
 			var shareTwitterBtn = document.getElementById("shareInTwitter");
 			var shareInPintrest = document.getElementById("shareInPintrest");
+			var shareInGooglePlus = document.getElementById("shareInGooglePlus");
 			var appId = 444105492629934;
 			var url = "http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html";
 
@@ -85,6 +97,10 @@
 
 			shareTwitterBtn.addEventListener("click", function (evt) {
 				console.log("Pintrest share button");
+			}, false);
+
+			shareInGooglePlus.addEventListener("click", function (evt) {
+				console.log("Google+ share button");
 			}, false);
 		</script>
 	</body>
