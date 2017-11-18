@@ -16,57 +16,13 @@
 		<meta property="og:type"               content="Facebook Share" />
 		<meta property="og:title"              content="Facebook share Example" />
 		<meta property="og:description"        content="Facebook Share Example" />
-		<meta property="og:image"              content="/Desert.jpg" />
-		<XmXeXtXaX property="XoXgX:XiXmXaXgXeX"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
-		
-		
-
-		<script>
-			window.fbAsyncInit = function() {
-				FB.init({
-				appId      : '444105492629934',
-				xfbml      : true,
-				version    : 'v2.9'
-				});
-				FB.AppEvents.logPageView();
-			};
-
-			(function(d, s, id){
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) {return;}
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
-		<script>
-			window.pAsyncInit = function() {
-				PDK.init({
-					appId: "<your app-id>", // Change this
-					cookie: true
-				});
-			};
-
-			(function(d, s, id){
-				var js, pjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) {return;}
-				js = d.createElement(s); js.id = id;
-				js.src = "//assets.pinterest.com/sdk/sdk.js";
-				pjs.parentNode.insertBefore(js, pjs);
-			}(document, 'script', 'pinterest-jssdk'));
-		</script>
+		<meta property="og:image"              content="https://vidhyamahendran.github.io/Desert.jpg" />
 	</head>
 	<body>
 		<div class="container">
 			<div class="main">
 				<h2>Share using Facebook</h2>
 				<p><button id="shareInFacebook">Share in Facebook</button></p>
-				<div
-				class="fb-like"
-				data-share="true"
-				data-width="450"
-				data-show-faces="true">
-				</div>
 
 				<h2>Share using Twitter</h2>
 				<p><a href="https://twitter.com/home?status=This%20photo%20is%20awesome!%20Check%20it%20out:%20pic.twitter.com/9Ee63f7aVp" id="shareInTwitter">Share in Twitter</a></p>
@@ -78,34 +34,5 @@
 				<p><button id="shareInGooglePlus">Share in Google+</button></p>
 			</div>
 		</div>
-		<script>
-			var shareFbBtn = document.getElementById("shareInFacebook");
-			var shareTwitterBtn = document.getElementById("shareInTwitter");
-			var shareInPintrest = document.getElementById("shareInPintrest");
-			var shareInGooglePlus = document.getElementById("shareInGooglePlus");
-			var appId = 444105492629934;
-			var url = "http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html";
-
-
-			shareFbBtn.addEventListener("click", function (evt) {
-				FB.ui({
-					method: 'share',
-					mobile_iframe: true,
-					href: url,
-				}, function(response){});
-			}, false);
-
-			shareTwitterBtn.addEventListener("click", function (evt) {
-				console.log("Twitter share button");
-			}, false);
-
-			shareTwitterBtn.addEventListener("click", function (evt) {
-				console.log("Pintrest share button");
-			}, false);
-
-			shareInGooglePlus.addEventListener("click", function (evt) {
-				console.log("Google+ share button");
-			}, false);
-		</script>
 	</body>
 </html>
