@@ -1,107 +1,38 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Simple Slick carousel</title>
-	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
-	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/css/style.css">
-		
-		
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">	
-	
-	<script src="http://projects.mediadev.edgesuite.net/customers/akamai/mdt-html5-core/standard/4.78.3/amp/amp.min.js"></script>
-	<script>
-		function loadAmpVideos(){
-			var video = {
-            source: [{
-              src: "http://projects.mediadev.edgesuite.net/customers/akamai/video/VfE.mp4",
-              type: "video/mp4"
-            }]
-          };
-		  
-		  var config = {
-			autoplay : false,
-			paths: {
-				player: "http://projects.mediadev.edgesuite.net/customers/akamai/mdt-html5-core/standard/4.78.3/amp/",
-				resources: "http://projects.mediadev.edgesuite.net/customers/akamai/mdt-html5-core/standard/4.78.3/resources/"
-			},
-			media : video
-		};
+<html>
+	<head>
+		<title>My First Hosted Github page</title>
+		<!-- Twitter card information -->
+		<meta name="twitter:url" content="https://vidhyamahendran.github.io/" />
+		<meta name="twitter:card" value="summary" />
+		<meta name="twitter:site" content="@MahendranVidhya" />
+		<meta name="twitter:title" content="My First Github Hosted page" />
+		<meta name="twitter:description" content="Hosting a simple HTML page in Github is much easy" />
+		<!-- Twitter Summary card images must be at least 120x120px -->
+		<meta name="twitter:image" content="https://vidhyamahendran.github.io/Desert.jpg" />
 
-		  config.media.title = 'Sample Video 2';
-		  akamai.amp.AMP.create("amp-1", config);//1st video creation
-		  
-		  config.media.title = 'Sample Video 2';
-		  akamai.amp.AMP.create("amp-2", config);//2nd video creation
-		  
-		  config.media.title = 'Sample Video 3';
-		  akamai.amp.AMP.create("amp-3", config);//3rd video creation
-		  
-		  config.media.title = 'Sample Video 4';
-		  akamai.amp.AMP.create("amp-4", config);//4th video creation
+		<!-- Facebook Open Graph Meta Information -->
+		<meta property="og:url"                content="https://vidhyamahendran.github.io/" />
+		<meta property="og:type"               content="Facebook Share" />
+		<meta property="og:title"              content="Facebook share Example" />
+		<meta property="og:description"        content="Facebook Share Example" />
+		<meta property="og:image"              content="https://vidhyamahendran.github.io/Desert.jpg" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<h2>Share using Facebook</h2>
+				<p><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvidhyamahendran.github.io%2F" target="_blank">Share in Facebook</button></a></p>
 
-		}
-	</script>
-	<style>
-		.amp-wrapper{
-			min-height: 300px;
-		}
-		.slick-slide{
-			border: 5px solid #fff;
-		}
-		.slick-slider{
-			margin: 0;
-		}
-		h2{
-			font-family:Arial;
-		}
-		.slick-dots li button:before{
-			font-size: 16px;
-		}
-		body{
-			background:#3498db;
-		}
-		.slick-dots li.slick-active button:before{
-			color: #fff;
-			opacity:1;
-		}
-		.blue h3{
-			line-height: 50px;
-			margin: 0;
-		}
-	</style>
-</head>
-<body onload="loadAmpVideos()">
-	<section id="features" class="blue">
-		<div class="content">
-			
-			<h2>Carousel - With 4 AMP Videos</h2>
-			<div class="slider single-item">
-				<div><h3>1</h3><div id="amp-1" class="amp-wrapper"></div></div>
-				<div><h3>2</h3><div id="amp-2" class="amp-wrapper"></div></div>
-				<div><h3>3</h3><div id="amp-3" class="amp-wrapper"></div></div>
-				<div><h3>4</h3><div id="amp-4" class="amp-wrapper"></div></div>
+				<h2>Share using Twitter</h2>
+				<p><a href="https://twitter.com/intent/tweet?text=My%20Hosted%20Webpage&url=https://vidhyamahendran.github.io/" target="_blank">Share in Twitter</a></p>
+
+				<h2>Share using Pintrest</h2>
+				<p><a href="https://in.pinterest.com/pin/create/button/?media=https%3A%2F%2Fvidhyamahendran.github.io%2FDesert.jpg&description=My%20Github%20hosted%20page&url=https%3A%2F%2Fvidhyamahendran.github.io" target="_blank">Pin on Pinterest</a>
+
+				<h2>Share using Google+</h2>
+				<p><a href="https://plus.google.com/share?url=https://vidhyamahendran.github.io/" target="_blank">Share in Google+</a></p>
 			</div>
 		</div>
-	</section>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('.single-item').slick({
-				dots: true,
-				infinite: false,
-				speed: 500,
-				slidesToShow: 1,
-				slidesToScroll: 1
-			});
-	});
-	</script>
-
-	
-	
-</body>
+	</body>
 </html>
